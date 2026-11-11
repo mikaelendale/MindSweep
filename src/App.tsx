@@ -154,7 +154,7 @@ export default function App() {
       setFocusPercentage(100);
     }
   }, [focusedTime, distractedTime]);
-  
+
   const toggleTracking = () => {
     const newTrackingState = !isTracking;
     localStorage.setItem("isTracking", newTrackingState.toString());
@@ -278,8 +278,8 @@ export default function App() {
                   focusPercentage > 80
                     ? "bg-gradient-to-r from-emerald-500 to-teal-400"
                     : focusPercentage > 50
-                    ? "bg-gradient-to-r from-amber-500 to-yellow-400"
-                    : "bg-gradient-to-r from-red-500 to-rose-400"
+                      ? "bg-gradient-to-r from-amber-500 to-yellow-400"
+                      : "bg-gradient-to-r from-red-500 to-rose-400"
                 )}
                 initial={{ width: "0%" }}
                 animate={{ width: `${focusPercentage}%` }}
